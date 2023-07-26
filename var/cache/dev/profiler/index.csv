@@ -1,0 +1,13 @@
+fc04dd,::1,GET,http://localhost/prestashop/shashop/admin815btryfq/index.php/improve/modules/manage/action/configure/sp_banner?_token=3y7FL4_e7aDboOLS-xgN3hWevZsY2zXbgesIB6s3IzI,1689817712,,302
+8eb2d4,::1,GET,http://localhost/prestashop/shashop/admin815btryfq/index.php/configure/advanced/performance/?_token=3y7FL4_e7aDboOLS-xgN3hWevZsY2zXbgesIB6s3IzI,1689817714,,200
+e909d7,::1,GET,http://localhost/prestashop/shashop/admin815btryfq/index.php/configure/advanced/performance/?_token=3y7FL4_e7aDboOLS-xgN3hWevZsY2zXbgesIB6s3IzI,1689817714,,500
+95fdba,::1,POST,http://localhost/prestashop/shashop/admin815btryfq/index.php/common/notifications?_token=3y7FL4_e7aDboOLS-xgN3hWevZsY2zXbgesIB6s3IzI&rand=1689817720926,1689817722,,200
+335428,::1,POST,http://localhost/prestashop/shashop/admin815btryfq/index.php/common/notifications?_token=3y7FL4_e7aDboOLS-xgN3hWevZsY2zXbgesIB6s3IzI&rand=1689817720921,1689817723,,200
+b84f4a,::1,POST,http://localhost/prestashop/shashop/admin815btryfq/index.php/common/notifications?_token=3y7FL4_e7aDboOLS-xgN3hWevZsY2zXbgesIB6s3IzI,1689818995,,200
+6357d9,::1,POST,http://localhost/prestashop/shashop/admin815btryfq/index.php/common/notifications?_token=3y7FL4_e7aDboOLS-xgN3hWevZsY2zXbgesIB6s3IzI&rand=1689818994915,1689818996,,200
+266836,::1,GET,http://localhost/prestashop/shashop/admin815btryfq/index.php/?configure=sp_banner&controller=AdminModules&id=3&token=c1a225604038ff835466c8e18853f2c1,1689835849,,200
+b3b716,::1,GET,http://localhost/prestashop/shashop/admin815btryfq/index.php/?configure=sp_banner&controller=AdminModules&id=3&token=c1a225604038ff835466c8e18853f2c1,1689835849,,500
+caae52,::1,POST,http://localhost/prestashop/shashop/admin815btryfq/index.php/common/notifications?_token=YWP6V8tvDEnrVIKfwf0B5mCCoRxw2N8sGJku6AagPqs,1689835877,,200
+a9f631,::1,POST,http://localhost/prestashop/shashop/admin815btryfq/index.php/common/notifications?_token=YWP6V8tvDEnrVIKfwf0B5mCCoRxw2N8sGJku6AagPqs&rand=1689835877378,1689835878,,200
+95dc87,::1,POST,http://localhost/prestashop/shashop/admin815btryfq/index.php/common/notifications?_token=YWP6V8tvDEnrVIKfwf0B5mCCoRxw2N8sGJku6AagPqs&rand=1689835911205,1689835912,,200
+5193d1,::1,POST,http://localhost/prestashop/shashop/admin815btryfq/index.php/common/notifications?_token=YWP6V8tvDEnrVIKfwf0B5mCCoRxw2N8sGJku6AagPqs&rand=1689835911202,1689835912,,200
