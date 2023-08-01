@@ -1,4 +1,6 @@
 <section class="sp_banner_slider">
+     <h1>Hi</h1>
+     {$module_name}
     <h2 class="sp_banner_title">{$module_name}</h2>
 <div class="sp_container">
     <div class="sp_wrapper">

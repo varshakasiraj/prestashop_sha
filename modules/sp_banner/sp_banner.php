@@ -7,10 +7,9 @@ class Sp_Banner extends Module{
         $this->version = '2.1.2';
         $this->author = 'PrestaShop';
         $this->need_instance = 0;
-        $this->get_module_name = Configuration::get("block_name");
         $this->bootstrap = true;
         parent::__construct();
-        $this->registerHook('displayHeader');
+        
         $this->displayName = $this->trans('sp_Banner');
         $this->description = $this->trans('new arrival banner');
 
@@ -75,14 +74,32 @@ class Sp_Banner extends Module{
         }
         return $output.$this->displayForm().$update.$this->displaySpbannerTable().$this->displayInsertForm();
     }
-    public function processInsertSlider(){
-        $image = (string) Tools::getValue("image_name");
-        $image_name = $this->imageValidation($image);
-        $slider_name= (string) Tools::getValue("slider_name");
-        $path = (string) Tools::getValue("link");
-        $positions = (int) Tools::getValue("position");
-        $status = (int) Tools::getValue("status");
-        $output = $this->displayConfirmation($this->l('Sucessfully Filled the Fileds'));
+    public function processInsertSlider(){ 
+        $error = array();
+        if(!empty(Tools::getValue("image_name"))){
+            $image = (string) Tools::getValue("image_name");
+            $image_name = $this->imageValidation($image);
+        }
+        else{
+            $error[]= $this->displayConfirmation($this->l('image extension is worng '));
+        }
+        if(!empty(Tools::getValue("slider_name"))){
+
+             $slider_name= (string) Tools::getValue("slider_name");
+        }
+        else{
+            $error[]= $this->displayConfirmation($this->l(''));
+        }
+        if(!empty(Tools::getValue("link"))){
+
+            $path = (string) Tools::getValue("link");
+        }
+        if(!empty( Tools::getValue("position"))){
+            $positions = (int) Tools::getValue("position");
+        }
+        if(!empty(Tools::getValue("status"))){
+            $status = (int) Tools::getValue("status");
+        }
         $data =[
             'image_name'=>$image_name,
             'slider_name'=>$slider_name,
@@ -93,14 +110,32 @@ class Sp_Banner extends Module{
         $this->insertSlider($data);
     }
     public function processUpdateSlider(){
-        $image = (string) Tools::getValue("image_name");
-        $image_name = $this->imageValidation($image);
-        $slider_name= (string) Tools::getValue("slider_name");
-        $path = (string) Tools::getValue("link");
-        $positions = (int) Tools::getValue("position");
-        $status = (int) Tools::getValue("status");
+        $error = array();
+        if(!empty(Tools::getValue("image_name"))){
+            $image = (string) Tools::getValue("image_name");
+            $image_name = $this->imageValidation($image);
+        }
+        else{
+            $error[]= $this->displayConfirmation($this->l('image extension is worng '));
+        }
+        if(!empty(Tools::getValue("slider_name"))){
+
+             $slider_name= (string) Tools::getValue("slider_name");
+        }
+        else{
+            $error[]= $this->displayConfirmation($this->l(''));
+        }
+        if(!empty(Tools::getValue("link"))){
+
+            $path = (string) Tools::getValue("link");
+        }
+        if(!empty( Tools::getValue("position"))){
+            $positions = (int) Tools::getValue("position");
+        }
+        if(!empty(Tools::getValue("status"))){
+            $status = (int) Tools::getValue("status");
+        }
         $id = (int) Tools::getValue("id");
-        $output = $this->displayConfirmation($this->l('Sucessfully Filled the Fileds'));
         $data =[
             'image_name'=>$image_name,
             'slider_name'=>$slider_name,

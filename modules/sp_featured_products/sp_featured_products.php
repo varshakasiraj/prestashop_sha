@@ -7,8 +7,6 @@ class Sp_Featured_Products extends Module{
         $this->version = '2.1.2';
         $this->author = 'PrestaShop';
         $this->bootstrap = true;
-        $this->get_module_name = Configuration::get("sp_featured_products_name");
-        $this->get_products_id = Configuration::get("sp_featured_products");
         parent::__construct();
         $this->displayName = $this->trans('sp_featured_products');
         $this->description = $this->trans('View Products With Select2 ');
@@ -31,7 +29,7 @@ class Sp_Featured_Products extends Module{
     public function hookDisplayHome(){
         $this->context->smarty->assign(
             [
-                'products'=> $this->getProduct(),
+                'products'=> Configuration::get("sp_featured_products_name"),
             ]);
         return  $this->display(__FILE__, 'sp_featured_products.tpl');
     }
@@ -56,23 +54,11 @@ class Sp_Featured_Products extends Module{
 
     }
     public function getProduct(){
-        $decode_id =json_decode($this->get_products_id );
+        $decode_id =json_decode(Configuration::get("sp_featured_products"),TRUE);
         foreach ($decode_id as $product_id ){
             $product=new Product($decode_id);
-            $result[] =$this->processProductById($product);
         }
-        return $result;
-    }
-    public function processProductById($product){
-        $assembler = new ProductAssembler($this->context);
-        $presenterFactory = new ProductPresenterFactory($this->context);
-        $presentationSettings = $presenterFactory->getPresentationSettings();
-        $presenter = $presenterFactory->getPresenter();
-        return $presenter->present(
-            $presentationSettings,
-            $assembler->assembleProduct($product),
-            $this->context->language
-        );
+        return $product;
     }
 }
 ?>
